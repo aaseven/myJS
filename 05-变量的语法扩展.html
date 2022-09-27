@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        // 1：一个变量被重新赋值后，后面的会覆盖前面的。
+        var name = 'yh';
+        console.log(name); // name
+        name = '李哈哈';
+        console.log(name); // 李哈哈
+
+        // 2: 声明多个变量
+        var age = 18,
+            address = '北京',
+            gz = 2000;
+        console.log(age,address,gz)
+
+        // 3.声明变量的特殊情况
+        // 3.1 只声明不赋值 结果是 undefined
+        var a;
+        console.log(a);//  undefined
+    </script>
+</head>
+<body>
+
+</body>
+</html>
