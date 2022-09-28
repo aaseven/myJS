@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    // 我们的表单经常得到的是字符串类型的，我们要把他们转成数字型 才能对他们做加法操作
+
+
+    // var age = prompt('请输入你的年龄');
+    // console.log(age); // 字符串型的 结果
+
+    // 1:parseInt(变量)  可以将string类型转成整数数值型， 得到的是 整数
+    // console.log(parseInt(age)); // 现在就是 数字型的 结果了
+    //
+    // console.log(parseInt('3.1415926')); // 3 取整的
+    //
+    // console.log(parseInt('3.94')); // 3 取整的
+    //
+    // console.log(parseInt('120px')); // 120  （他会把字母px 去掉）
+
+    // console.log(parseInt('rem120px')); // NaN
+
+
+    // 2:parseFloat(变量)  可以将string类型转换为 数字型， 得到的是小数 浮点数
+    //    console.log(parseFloat('3.1415926')); // 3.1415926
+
+    //     console.log(parseFloat('120px')); // 120（他会把字母px 去掉）
+
+    //     console.log(parseFloat('rem120px')); // NaN
+
+    // 3: 利用Number(变量)
+
+    var str = '123';
+    console.log(Number(str)); // 数字型的 123
+
+    console.log(Number('12')); // 数字型的 12
+
+
+    // 4. 利用了算数运算 -  *  / 隐式转换
+    console.log('88' - 0); // 数字型的 88
+
+    console.log('123' - '120'); // 数字型的 3 减号做了 运算
+
+    console.log('123' + '120'); //  字符串拼接 123120
+
+    console.log('123' * '120'); //  数字型的 14760 加号 做了运算
+
+    console.log('888' * 1); // 数字型的888
+
+</script>
+<body>
+
+</body>
+</html>

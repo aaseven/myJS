@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 弹出一个输入框，让用户输入出生年份，并把用户输入的值 用变量保存起来
+        var year = prompt('请输入你的出生年月日');
+
+        // 用今年的年份减去 用户输入的 变量的值，结果就是现在的年龄
+        var age = 2022 - year; // year取过来的时候是 字符串型的， 但是我用2022减去了它 结果就是数字型了，减法有隐式转换。
+
+        alert('你今年' + age + '岁');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
