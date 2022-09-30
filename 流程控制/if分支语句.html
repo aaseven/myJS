@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1. if 的语法结构   if是如果的意思
+
+        // 如果 if ()里的条件表达式为真 ，那他就执行 { } 花括号里面的语句
+        // 如果这个  if ()里的条件表达式为假，那就不执行 花括号里面的语句，直接执行if 后面的代码
+        // if (条件表达式) {
+        //     // 执行语句
+        // }
+
+
+        // if里面的语句 和 else里面的语句 最终只能有一个语句执行，如果if里面的表达式结果为真就执行if的 否则执行 else里面的
+        // else 后面直接跟大括号
+
+        // if (2 > 1) {
+        //     console.log('你好周五');
+        // }
+        //
+        //
+        // var age = prompt('请输入你的年龄：');
+        //
+        // if (age >= 18) {
+        //
+        //     alert('你的年纪合法，可以进入网吧');
+        //
+        // } else {
+        //     alert('nonono你是未成年不能进网吧');
+        // }
+
+
+        // 能被4整除 且 不能整除100的是 闰年 (如2004年就是闰年，1901年不是闰年)
+        // 或者能被400整除的就是 闰年
+
+        // var year = prompt('请你输入年份：');
+        //
+        // if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        //
+        //     alert(year + '是闰年');
+        //
+        // } else {
+        //     alert(year + '是平年');
+        // }
+
+
+        var name = prompt('请输入你的名字：');
+
+        if ( name === '刘德华') {
+            alert('你中奖了');
+        } else {
+            alert('无');
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

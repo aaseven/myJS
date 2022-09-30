@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<!--
+    +        加
+
+    -        减
+
+    *        乘
+
+    /        除
+
+    %        取余数
+
+-->
+
+<script>
+    console.log(1 + 1); // 2
+
+    console.log(1 - 1); // 0
+
+    console.log(1 * 1); // 1
+
+    console.log(1 / 1); // 1
+
+
+    // 1. % 取余 （取模）
+
+    console.log(4 % 2); // 0
+
+    console.log(5 % 3); // 2
+
+    console.log(3 % 5); // 3
+
+
+    // 2. 浮点数 算数运算里面会有问题
+
+    console.log(0.1 + 0.2); // 0.30000000000000004
+
+    console.log(0.07 * 100); // 7.000000000000001
+
+    // 3. 我们不能直接拿着浮点数来进行相比较 是否相等
+    // 所以不要直接判断两个浮点数是否相等！
+    var num = 0.1 + 0.2;
+    console.log(num == 0.3); // false
+
+
+    // 我们怎么判断一个数能够被整除呢？
+    // 答：它的余数是0 就说明这个数能被整除，这就是 % 取余运算符的主要用途
+
+
+    console.log(1 + 2 * 3); // 7
+
+    // 注意算数运算符是有优先级的，先乘除，后加减，有小括号先算小括号里面的。
+
+</script>
+<body>
+
+</body>
+</html>
+

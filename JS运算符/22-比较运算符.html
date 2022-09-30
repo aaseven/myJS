@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 是两个数据进行比较时所使用的运算符，比较运算后，会返回一个布尔值(true/false)作为比较运算的结果
+        //  <   小于号
+        //  >   大于号
+        //  >=  大于等于号
+        //  <=  小于等于号
+        //  ==  判等号（会转型） 只要求值相等  默认转换数据类型 会把字符串型的数据转换为数字型
+        //  !=  不等号  （等于返回 false  不等于返回 true)）
+        //  ===    !==   全等  必须要求值和 两侧的数据类型都一致 才是true
+
+
+        console.log(3 > 5); // false
+
+        console.log('18' == 18);// true 只要求值相等  默认转换数据类型 会把字符串型的数据转换为数字型
+
+        console.log(18 != 18);//false
+
+        console.log('哈哈' != '就很好');//true
+
+        console.log('哈哈' != '哈哈');//false
+
+        console.log('18' === 18); // false
+
+        console.log(18 === 18); // true  要求值和 两侧的数据类型都一致 才是true
+
+        // 一个等号 =   赋值     把右边给左边
+        // 两个等号 ==  判断     判断两边值是否相等（注意会有隐式转换，会把字符串型的数据转换为数字型）
+        // 三个等号 === 全等     判断两边的值和数据类型是否完全相同
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

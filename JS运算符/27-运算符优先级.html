@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //     1-8 是优先级的 排序
+
+        //        1.  小括号       ()
+        //
+        //        2.  一元运算符    ++  --   ！  逻辑非！的优先级很高
+        //
+        //        3.  算数运算符    先 * /  %  后 + -
+        //
+        //        4.  关系运算符    >  >=  <  <=
+        //
+        //        5.  相等运算符    ==   !=  ===   !==
+        //
+        //        6.  逻辑运算符    先 &&  后  ||    逻辑与 比 逻辑或 的 优先级高
+        //
+        //        7.  赋值运算符    =
+        //
+        //        8.  逗号运算符    ,    集体声明变量的时候  会用到 , 逗号运算符
+
+
+        //  第一题：
+        console.log(1 >= 5 || '你好' != '还行' && !(12 * 2 == 144) && true); // 结果是true
+
+        //表达式1中  1 >= 5 是假的 false  所以返回 表达式2中的 '你好'
+        //
+        // console.log(false || '你好' != '还行' && !(12 * 2 == 144) && true);
+        //
+        // // '你好' != '还行' 这2个字符串不等于 返回 true
+        //
+        // console.log(false || true && !(12 * 2 == 144) && true);
+        //
+        // // 优先算小括号里的  12 * 2 == 144 是false  !(12 * 2 == 144) 是对 !(false) 取反  那就是 true
+        //
+        // console.log(false || true && true && true);
+        //
+        // // 逻辑与 比 逻辑或 的 优先级高
+        // //  true && true && true   逻辑与&&中 两侧都是true  那结果就是true
+        //
+        // console.log(false || true);
+        //
+        // // 逻辑或|| 短路运算符
+        // // 如果表达式1 结果为真 则返回的是表达式1，如果表达式1结果为假，则返回表达式2
+        //
+        // console.log(false || true); // true
+
+        // 第二题：
+
+        var num = 10;
+
+        console.log(5 == num / 2 && (2 + 2 * num).toString() === '22'); // 结果是 false
+
+        // 5 == num / 2
+        // 10 / 2  是5
+        // 5 == 5 是相等的  所以是true
+        //
+        // console.log(true && (2 + 2 * num).toString() === '22');
+
+        //   先算小括号里面的 （2 + 2 * num）   toString() 是把数值型的转换成字符串型的
+
+        //   先 * /  %  后 + -  先算  2 * num    结果是20  （ 2+20 ）.toString()   是 '22'
+        //
+        //  '22' === '22'  相等  全等要求值和数据类型都一样   结果是 true
+        //
+        // console.log(true && true); // true
+
+
+        // 第三题：
+
+        var a = 3 > 5 && 2 < 7 && 3 === 4;
+        // console.log(a);
+        //
+        // //  3 > 5 是false
+        // //  2 < 7 是true
+        // //  3 === 4 是false
+        //
+        // var a=  false  && true && false; // a 是 false
+
+        console.log(a); // a 是 false
+
+
+        // 第四题：
+
+        var b = 3 <= 4 || 3 > 1 || 3 != 2;
+        // console.log(b); // true
+
+
+        // 3 <= 4  是true
+        // 3 > 1   是true
+        // 3 != 2    3不等于2   是true
+        //
+        // var b = true || true || true;
+        console.log(b); // true
+
+
+        // 第五题：
+        var c = 2 === "2";
+
+        console.log(c); //false
+
+
+        //第六题：上面得出 c 是false      b是 true  a是false
+
+        var d = !c || b && a;
+
+        // 先 &&  后  ||
+
+        // !c 就是对 false 取反 就是 true
+
+        // true &&  false    true是真的  如果第一个表达式的值为真，则返回表达式2 那就是false
+
+        // true || false    如果表达式1 结果为真 则返回的是表达式1，如果表达式1结果为假，则返回表达式2  那就是true
+        console.log(d); // true
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1. 用我们的布尔值参与的逻辑运算  true && false == false
+
+        // 2. 123 && 456  结果是值 还是表达式？
+
+        // 当有多个表达式（值）时，左边的表达式值可以确定结果时，就不再继续运算右边的表达式的值
+
+        // 逻辑与 &&
+        // 1代表true 是真的  如果第一个表达式的值为真，则返回表达式2
+        console.log(1 && 456); // 456
+
+        // 0代表false是假的  如果第一个表达式的值为假，则返回表达式1
+        console.log(0 && 123); // 0
+
+        // 如果第一个表达式的值是假的 后面无论有多少都不会去看了，直接返回第一个表达式
+        console.log(0 && 1 + 2 && 234 * 456); // 0
+
+        // 如果有空的 或者 否定的 为假  其余是真的
+        // 再数值里面 0 是false代表假的 其余的数都是真的 true
+        // 在字符串里面 '' 空串是假的 ，其余的字符串都是真的
+        console.log('' && 2897 * 765); // 返回的结果是一个空
+        // null  undefined  NaN  这3个也是假的
+        console.log(null && 2897 * 765); // null
+        console.log(undefined && 2897 * 765); // undefined
+        console.log(NaN && 2897 * 765); // NaN
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
