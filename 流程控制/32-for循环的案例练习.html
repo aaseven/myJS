@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+        // 1. 求1-100 之间所有数的平均值
+
+        // 1-100的和 除以 100  就是平均值
+
+
+        var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+
+        average = sum / 100;
+
+        console.log(average);// 50.5
+
+
+        // 2. 求1-100之间所有偶数和奇数的和
+
+        var even = 0;
+
+        var odd = 0;
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                // i 和 2 取余等于0  那就证明是偶数
+                even = even + i;
+            } else {
+                odd = odd + i;
+            }
+        }
+
+        console.log('偶数的和' + even + '');
+        console.log('奇数的和' + odd + '');
+
+        // 3. 求1-100之间所有能被3整除的数字的和
+
+
+        var result = 0;
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+
+                result= result+i;
+            }
+
+        }
+        console.log(result);//1683
+
+
+    </script>
 </head>
 <body>
-$END$
+
 </body>
 </html>
