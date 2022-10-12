@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //1: 先弹出一个输入框，输入班级总的人数（num）假设班里有2个人 那这个num 里面存的就是2
+
+        //2: 依次输入学生的成绩（保存起来 score）， 此时我们需要用到 for循环，弹出的次数跟班级总人数有关系  条件表达式 i <= num
+
+        //3: 计算成绩，先求总成绩（sum）,之后求平均成绩（average）
+
+        //4: 弹出结果
+
+
+        var num = prompt('请输入班级的总人数：'); // num 是班级的总人数
+
+        var sum = 0; // 求和的变量
+        var average = 0; // 求平均成绩的变量
+        for (var i = 1; i <= num; i++) {
+
+            // 注意：score 是从prompt()里面取出来的，所以是字符型的 需要转换成数字型
+            var score = prompt('请你输入第' + i + '个学生的信息');
+
+            // sum = sum + score*1; // score是学生输入的成绩，你输入一个我就加到 sum里面去
+            // score*1 就可以把字符型转换成 数字型
+            // 还可以用 parseFloat() 因为分数会有小数
+            sum = sum + parseFloat(score);
+
+        }
+
+        // 当整个和 求完了之后  才能求平均值，所以这个平均值要写在 for循环的外面
+
+        average = sum / num;
+
+        alert(average);
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

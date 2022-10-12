@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        var str = '';
+
+        for (var i = 1; i <= 10; i++) {
+
+            // 核心算法 里层循环：
+            // j = i
+            // j是1  1 <= 10 所以打印10个星星
+            // 里层的for循环全部执行完毕后 打印了10个星星
+
+            // 然后执行 外层for循环的 i++ ,i加完了是 2
+            // j现在是2  2 <= 10 所以打印9个星星
+            for(var j = i; j <= 10; j++){
+
+                str = str +'☆';
+
+            }
+
+            str = str + '\n';
+        }
+
+        console.log(str);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
