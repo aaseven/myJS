@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    const a =23
+    const b = 10
+    // 当前申请结算费用
+    const currentFee = a;
+
+    // 结算费用上限
+    const feeLimit = b;
+
+    // 计算超出的费用
+    const exceedAmount = currentFee - feeLimit;
+
+    // 检查是否超出上限
+    if (exceedAmount > 0) {
+        // 超出上限，显示错误提示，并具体说明超出的金额
+        alert("申请结算金额"+a+"元"+"超出上限，请调整金额，超出金额为：" + exceedAmount + "元");
+    } else {
+        // 未超出上限，可以继续处理
+        alert("结算费用合法，可以继续申请。");
+    }
+</script>
+<body>
+
+</body>
+</html>

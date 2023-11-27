@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    function countdown(seconds, onTick, onComplete) {
+      let remainingTime = seconds;
+      const interval = 1000; // 1秒
+
+      const timer = setInterval(function() {
+        if (remainingTime <= 0) {
+          clearInterval(timer); // 清除定时器
+          if (typeof onComplete === 'function') {
+            onComplete();
+          }
+        } else {
+          if (typeof onTick === 'function') {
+            onTick(remainingTime);
+          }
+          remainingTime--;
+        }
+      }, interval);
+    }
+
+    // 用法示例
+    countdown(
+            66, // 设置倒计时的秒数
+            function(seconds) {
+              console.log('倒计时剩余'+ seconds);
+            },
+            function() {
+              console.log('倒计时完成！');
+            }
+    );
+  </script>
+</head>
+<body>
+
+</body>
+</html>

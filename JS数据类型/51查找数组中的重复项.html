@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * 这段代码是一个查找数组中重复项的函数，下面是它的逻辑：
+         *
+         * 创建两个 Set 集合：seen 和 duplicates，用于跟踪已经见过的元素和重复项。
+         * 使用 for 循环遍历输入数组 arr 中的每个元素。
+         * 在循环中，首先获取当前元素 item。
+         * 使用 seen.has(item) 来检查 seen 集合中是否已经包含了当前元素。如果是，表示当前元素是一个重复项，将它添加到 duplicates 集合中。
+         * 如果 seen 集合中没有当前元素，表示它是第一次出现，将它添加到 seen 集合中，以便后续检查。
+         * 循环结束后，duplicates 集合中包含了所有重复的元素。
+         * 最后，通过 Array.from(duplicates) 将 duplicates 集合转换为数组，这个数组包含了所有重复的元素。
+         * 返回这个包含重复元素的数组。
+         * 在给定的示例中，myArray 包含了一些重复元素，如 2 和 4。因此，调用 findDuplicates(myArray) 后，它会返回包含这些重复元素的数组 [2, 4]，并在控制台中打印出来。
+         */
+        function findDuplicates(arr) {
+            const seen = new Set();
+            const duplicates = new Set();
+
+            for (let i = 0; i < arr.length; i++) {
+                const item = arr[i];
+                if (seen.has(item)) {
+                    duplicates.add(item);
+                } else {
+                    seen.add(item);
+                }
+            }
+
+            return Array.from(duplicates);
+        }
+
+        const myArray = [1, 2, 3, 4, 2, 5, 6, 4];
+        const duplicateItems = findDuplicates(myArray);
+        console.log(duplicateItems); // 输出 [2, 4]
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

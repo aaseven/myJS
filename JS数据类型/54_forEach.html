@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const keyValueArray = [
+            { key: 'name', value: 'John' },
+            { key: 'age', value: 30 },
+            { key: 'city', value: 'Bei jing' }
+        ];
+
+        const Array = [
+            { key: 'name', value: 'yuhui' },
+            { key: 'age', value: 28 },
+            { key: 'city', value: 'Bei jing' }
+        ];
+
+        let cityValue1 = null;
+        let cityValue2 = null;
+
+        keyValueArray.forEach(function(item) {
+            debugger
+            if (item.key === 'city') {
+                cityValue1 = item.value;
+            }
+        });
+
+        Array.forEach(function(item) {
+            debugger
+            if (item.key === 'city') {
+                cityValue2 = item.value;
+            }
+        });
+
+        if (cityValue1 === cityValue2) {
+            debugger
+            alert('一致');
+        } else {
+            alert('NONONONON');
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

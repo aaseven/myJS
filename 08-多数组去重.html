@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重</title>
+    <script>
+//这段代码的目标是找到两个数组 arr1 和 arr2 之间的差异，然后返回包含这些差异的新数组。具体分析如下：
+// 首先，定义了两个数组 arr1 和 arr2，它们包含了一些整数。
+// 接下来，定义了一个名为 getArrDifference 的函数，该函数接受两个数组作为参数。
+// 在函数内部，使用 concat 方法将两个数组合并成一个新数组。这一步将 arr1 和 arr2 的元素连接在一起，不进行去重。
+// 然后，使用 filter 方法对合并后的数组进行过滤。filter 方法接受一个回调函数，该函数会对数组中的每个元素进行检查，只有满足特定条件的元素才会被保留。
+// 在回调函数中，通过 arr.indexOf(v) 查找元素 v 在数组中的第一个索引位置，然后通过 arr.lastIndexOf(v) 查找元素 v 在数组中的最后一个索引位置。如果这两个索引位置相同，说明该元素只出现了一次，否则说明该元素在数组中重复出现了。
+// 最后，filter 方法会返回一个新数组，其中只包含满足条件的元素，即只包含在 arr1 或 arr2 中出现一次的元素。
+// 最后，使用 console.log 打印出调用 getArrDifference 函数后返回的结果，即两个数组之间的差异。
+// 总之，这段代码的作用是找到两个数组中只出现一次的元素，并将它们放入一个新的数组中，然后将这个新数组打印到控制台。这可以用于找出两个数组之间的不同之处。
+        var arr1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,85];
+        var arr2 = [85,9,7,1,37,1,7,9,85,59,45];
+        // function getArrDifference(arr1, arr2) {
+        //     return arr1.concat(arr2).filter(function(v, i, arr) {
+        //         return arr.indexOf(v) === arr.lastIndexOf(v);
+        //     });
+        // }
+        // console.log(getArrDifference(arr1,arr2));//[2, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 37, 59, 45]
+
+        function getArrDifference(arr1, arr2) {
+            debugger
+            return arr1.concat(arr2).filter(function (value, index, collectionArr) {
+            //这段代码是在检查一个名为 collectionArr 的数组中是否存在一个特定的值 value，并且这个值只出现了一次。它的工作原理如下：
+            //indexOf(value) 方法用于查找数组 collectionArr 中第一次出现值 value 的索引位置。如果没有找到该值，它会返回 -1。
+            // lastIndexOf(value) 方法用于查找数组 collectionArr 中最后一次出现值 value 的索引位置。如果没有找到该值，它也会返回 -1。
+            // 如果 indexOf(value) 和 lastIndexOf(value) 返回的索引位置相同，意味着该值在数组中只出现了一次。因为它在数组中的第一次出现位置和最后一次出现位置都是同一个位置。
+            // 所以，这行代码实际上在检查数组 collectionArr 中的值 value 是否只出现了一次，如果是，它将返回 true，否则返回 false。
+            // 这种检查通常在数组或集合中查找唯一值的情况下很有用。如果要检查一个值是否在数组中存在且只存在一次，这是一种有效的方法。
+                return collectionArr.indexOf(value) === collectionArr.lastIndexOf(value);
+            });
+        }
+        console.log(getArrDifference(arr1,arr2));//[2, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 37, 59, 45]
+    </script>
+</head>
+<body>
+
+</body>
+</html>

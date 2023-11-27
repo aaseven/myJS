@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>刚刚</title>
+  <div class="activity-box">
+    <div class="img-bg">
+      <div class="left">
+        <div class="text">
+          <p class="title">积分优惠购</p>
+          <p class="cont">星飞帆4段</p>
+          <p class="cont">最低<span>100元</span>起</p>
+          <wxTag :path="nameUrlList[0].url">
+            <div class="gobtn">
+              <p>去看看</p>
+            </div>
+          </wxTag>
+        </div>
+        <img src="../images/img.png" />
+      </div>
+      <div class="right">
+        <wxTag :path="nameUrlList[1].url">
+          <div class="top">
+            <div class="text">
+              <p class="title">积分抽奖</p>
+              <p class="cont">积分抽iPhone14</p>
+            </div>
+            <img src="../images/img.png" />
+          </div>
+        </wxTag>
+        <wxTag :path="nameUrlList[2].url">
+          <div class="bottom">
+            <div class="text">
+              <p class="title">积分0元兑</p>
+              <p class="cont">100积分=1元</p>
+            </div>
+            <img src="../images/img.png" />
+          </div>
+        </wxTag>
+      </div>
+    </div>
+
+  </div>
+  <script>
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+<style>
+  .activity-box {
+    width: 662px;
+    height: 282px;
+    background: #ffffff;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    .img-bg {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 662px;
+      height: 262px;
+      background: url('../../assets/images/baby/diwen.png') no-repeat;
+      border-radius: 20px;
+      background-size: 100% 100%;
+    }
+  // div {
+  //     display: inline-block;
+  // }
+    .text {
+      float: left;
+      text-align: left;
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+        color: #333333;
+        line-height: 36px;
+        margin: 20px 0;
+      }
+      .cont {
+        font-size: 24px;
+        font-weight: 400;
+        color: #686978;
+        line-height: 36px;
+        span {
+          color: #C74A18;
+        }
+      }
+      .gobtn {
+        width: 140px;
+        margin-top: 28px;
+        height: 50px;
+        background: #FAE6D4;
+        border-radius: 30px;
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        color: #7E2A0E;
+        line-height: 50px;
+        position: relative;
+        display: block;
+        -webkit-tap-highlight-color: transparent !important;
+        p {
+          width: 140px;
+          line-height: 50px;
+          height: 50px;
+          -webkit-tap-highlight-color: transparent !important;
+        }
+      }
+    }
+    .left {
+      padding-left: 30px;
+      height: 222px;
+      float: left;
+      border-right: 1px solid #F1F1F1;
+      .cont {
+        height: 36px;
+      }
+      img {
+        float: left;
+        width: 166px;
+        margin-top: 25px;
+        height: 200px;
+        margin-left: 14px;
+      }
+    }
+    .right {
+      height: 100%;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      .cont {
+        line-height: 22px;
+        height: 22px;
+        color: #9597A9;
+      }
+      .top {
+        border-bottom: 1px solid #F1F1F1;
+        height: 121px;
+        position: relative;
+      }
+      .text {
+        margin-left: 31px;
+        .title {
+          margin-top: 25px;
+          margin-bottom: 10px;
+          line-height: 30px;
+        }
+      }
+      img {
+        width: 64px;
+        height: 84px;
+        margin-top: 10px;
+      }
+      .bottom {
+        height: 121px;
+        position: relative;
+        .title {
+          margin-top: 35px;
+        }
+        img {
+          margin-top: 20px;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+</style>

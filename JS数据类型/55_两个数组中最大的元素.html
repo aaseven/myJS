@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function findCommonMax(arr1, arr2) {
+            const max1 = Math.max(...arr1); // 找到第一个数组的最大元素
+            const max2 = Math.max(...arr2); // 找到第二个数组的最大元素
+
+            if (max1 === max2) {
+                return max1; // 如果两个数组的最大元素相同，返回这个最大元素
+            } else {
+                return null; // 如果最大元素不同，返回 null 表示没有共同最大元素
+            }
+        }
+
+        const array1 = [10, 20, 30, 40, 90];
+        const array2 = [15, 25, 35, 45, 50];
+
+        const commonMax = findCommonMax(array1, array2);
+        if (commonMax !== null) {
+            console.log(`共同最大元素是: ${commonMax}`);
+        } else {
+            console.log("没有共同的最大元素");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

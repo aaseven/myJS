@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        * 遍历users2里面是否包含 hobbies，如果有，就去和users1 里面的hobbies去做比较，
+          如果他俩的属性值相等，就打印 合格，如果不相等 就打印 请修改为一致
+        *
+        * 你可以使用嵌套循环和条件语句来遍历 users2 以检查是否包含 hobbies 属性，并与 users1 中的 hobbies 进行比较。以下是一个实现示例：
+        * 在这个示例中，我们首先遍历 users2，然后检查每个对象是否包含 hobbies 属性。
+        * 如果包含 hobbies 属性，我们再次遍历 users1 中的对象来查找匹配的 hobbies。
+        * 如果找到匹配的 hobbies，则打印 "合格"，否则打印 "请修改为一致"。
+        * 如果 users2 中的对象没有 hobbies 属性，会打印 "users2 中的对象没有 hobbies 属性"。
+        *
+        *
+        *
+        *.hasOwnProperty 是 JavaScript 中的一个对象方法，用于检查对象是否包含指定属性（键）。该方法接受一个参数，即要检查的属性名，如果对象中包含该属性，则返回 true，否则返回 false。
+
+        例如，假设有一个对象 myObject：
+
+        javascript
+        Copy code
+        const myObject = { name: "Alice", age: 30 };
+        你可以使用 .hasOwnProperty 方法来检查对象是否包含特定属性：
+
+        javascript
+        Copy code
+        const hasName = myObject.hasOwnProperty("name"); // 返回 true
+        const hasAddress = myObject.hasOwnProperty("address"); // 返回 false
+        在上面的示例中，hasName 的值为 true，因为对象中包含名为 "name" 的属性。而 hasAddress 的值为 false，因为对象中不包含名为 "address" 的属性。
+
+        .hasOwnProperty 主要用于避免因为原型链继承导致的属性名冲突或错误。如果你只关心对象自身的属性，可以使用这个方法来进行检查。
+        *
+        *
+        *
+        *
+        *
+        * */
+        // const users1 = [
+        //   { name: "哈哈", hobbies: "嘻嘻" },
+        //   { name: "嘿嘿", hobbies: "呵呵" },
+        // ];
+        //
+        // // const users2 = [
+        // //   { name: "55", hobbies1: "22" },
+        // //   { name: "11", hobbies1: "33" },
+        // // ];
+        // const users2 = [
+        //   { name: "11", hobbies: "嘻嘻" },
+        //   { name: "33", hobbies: "呵呵" },
+        // ];
+        //
+        // // 遍历 users2
+        // for (let i = 0; i < users2.length; i++) {
+        //   debugger
+        //   // 检查当前对象是否包含 hobbies 属性
+        //   if (users2[i].hasOwnProperty("hobbies")) { // .hasOwnProperty() 是 JavaScript 中的一个对象方法，用于检查对象是否包含指定属性（键）。该方法接受一个参数，即要检查的属性名，如果对象中包含该属性，则返回 true，否则返回 false。
+        //     // 遍历 users1 以查找匹配的 hobbies
+        //     let foundMatch = false;
+        //     for (let j = 0; j < users1.length; j++) {
+        //       if (users1[j].hasOwnProperty("hobbies") && users1[j].hobbies === users2[i].hobbies) {
+        //         foundMatch = true;
+        //         break;
+        //       }
+        //     }
+        //     if (foundMatch) {
+        //       console.log("合格");
+        //     } else {
+        //       console.log("请修改为一致");
+        //     }
+        //   } else {
+        //     console.log("users2 中的对象没有 hobbies 属性");
+        //   }
+        // }
+        const users1 = [
+            {num: "哈哈"},
+            {num: "嘿嘿"},
+        ];
+
+        const users2 = [
+            {num: "苦苦"},
+            {num: "拉拉"},
+            {num: "嘿嘿啦啦"},
+            {num: "哈哈"},
+        ];
+
+        let passed = true;
+
+        // 遍历 users1 数组
+        for (let i = 0; i < users1.length; i++) {
+          debugger
+            const num1Value = users1[i].num;
+            let found = false;
+
+            // 遍历 users2 数组
+            for (let j = 0; j < users2.length; j++) {
+                const num2Value = users2[j].num;
+
+                // 检查是否包含
+                if (num1Value === num2Value) {
+                    found = true;
+                    break;
+                }
+            }
+
+            // 如果未找到匹配，设置 passed 为 false
+            if (!found) {
+              debugger
+                passed = false;
+                break;
+            }
+        }
+
+        if (passed) {
+            console.log("通过了");
+        } else {
+            console.log("不通过");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

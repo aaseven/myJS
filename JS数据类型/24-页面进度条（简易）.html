@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            height: 300px;
+            overflow: auto;
+            padding-bottom: 500px;
+            box-sizing: border-box;
+            background: pink;
+        }
+
+        .sticky {
+            width: 100px;
+            height: 10px;
+            background: rgba(36, 167, 254, 0.979);
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        .sticky:nth-of-type(2) {
+            transform: translateX(100px);
+        }
+
+        .sticky:nth-of-type(3) {
+            transform: translateX(200px);
+        }
+
+        .sticky:nth-of-type(4) {
+            transform: translateX(300px);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Sticky Progress</h1>
+    <div class="sticky"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque? A, est perferendis explicabo
+        odit possimus quisquam rem ad tempore ipsa, obcaecati ex culpa similique, aliquam corporis. Quis,
+        nostrum expedita.</p>
+    <div class="sticky"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque? A, est perferendis explicabo
+        odit possimus quisquam rem ad tempore ipsa, obcaecati ex culpa similique, aliquam corporis. Quis,
+        nostrum expedita.</p>
+    <div class="sticky"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque? A, est perferendis explicabo
+        odit possimus quisquam rem ad tempore ipsa, obcaecati ex culpa similique, aliquam corporis. Quis,
+        nostrum expedita.</p>
+    <div class="sticky"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque? A, est perferendis explicabo
+        odit possimus quisquam rem ad tempore ipsa, obcaecati ex culpa similique, aliquam corporis. Quis,
+        nostrum expedita.</p>
+</div>
+</body>
+</html>

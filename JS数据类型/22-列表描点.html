@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 375px;
+            height: 300px;
+            position: relative;
+            overflow: auto;
+        }
+
+        .list {
+            min-height: 500px;
+            background: pink;
+        }
+
+        .list-content,
+        .list-content>div {
+            padding: 10px 20px;
+        }
+
+        .list-header {
+            padding: 10px;
+            background: #2D2D2D;
+            color: #FFFFFF;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="list">
+        <div class="list-group">
+            <div class="list-header">A</div>
+            <div class="list-content">
+                <div>Apple</div>
+                <div>Artichoke</div>
+                <div>Aardvark</div>
+                <div>Ant</div>
+                <div>Acorn</div>
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-header">B</div>
+            <div class="list-content">
+                <div>Big</div>
+                <div>Body</div>
+                <div>Base</div>
+                <div>Baby</div>
+                <div>But</div>
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-header">C</div>
+            <div class="list-content">
+                <div>Car</div>
+                <div>Cat</div>
+                <div>Cute</div>
+                <div>Can</div>
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-header">D</div>
+            <div class="list-content">
+                <div>Dog</div>
+                <div>Date</div>
+                <div>Danish</div>
+                <div>Dandelion</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

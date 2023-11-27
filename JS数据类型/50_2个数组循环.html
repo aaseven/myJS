@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        // 使用 addNumbers 函数进行相加操作
+        // const sum = addNumbers(5, 3);
+        // console.log(sum); // 输出 8
+
+        // endList 结案
+        // customerList 客户
+        const endList = [
+            {
+                name:'10',
+                num1: '30'
+            },
+            {
+                name:'20',
+                num1: '30'
+            }
+        ];
+        const customerList = [
+            {
+                name:'10',
+                num1: '30'
+            },
+            {
+                name:'20',
+                num1: '27'
+            },
+            {
+                name:'20',
+                num1: '2'
+            },
+            {
+                name:'20',
+                num1: '1.5'
+            }
+        ];
+        // seven_Yh
+        let sum1 = 0;
+        let fd21 = 0;
+        for(let i = 0; i < endList.length; i++) {
+            debugger
+            for(let j = 0; j < customerList.length; j++) {
+                debugger
+                if(endList[i]['name'] == customerList[j]['name']) {
+                    sum1 = addNumbers(sum1, Number(customerList[j]['num1']))|| 0
+                }
+            }
+             fd21 = Number(endList[i]['num1']) || 0
+            if(sum1 !== fd21) {
+                alert(`当前行号:${endList[i]['num1']}当前的值:${endList[i]['num1']}啦啦啦啦啦`)
+                break;
+            } else {
+                sum1 = 0
+            }
+            alert('成功了')
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 这段代码主要执行以下逻辑：
+        //
+        // 初始化变量 num10 为0。
+        //
+        // 使用一个外层循环 for 遍历 endList 数组的元素，其中 endList 是一个数组，包含多个对象。
+        //
+        // 在外层循环内，对每个 endList 元素，获取 endList[i]['extendValue1'] 的值，保存在变量 rowNUM 中。
+        //
+        // 继续在外层循环内，获取 endList[i]['extendValue48'] 的值，保存在变量 ROWNAME 中。
+        //
+        // 然后，使用一个内层循环 for 遍历 customerList 数组的元素，其中 customerList 也是一个数组，包含多个对象。
+        //
+        // 在内层循环内，对每个 customerList 元素，获取 customerList[j]['extendValue12'] 的值，与 rowNUM 进行比较，如果它们相等，执行以下操作：
+        //
+        // 将 customerList[j]['extendValue33'] 的值赋给 num10。
+        // 在内层循环结束后，检查 num10 是否等于 endList[i]['extendValue48']，如果它们不相等，执行以下操作：
+        //
+        // 弹出一个警告框，提醒用户结案明细行号 endList[i]['extendValue1'] 的客户明细对应结案行号的新产品系列需要与结案明细页签行的新产品系列保持一致。
+        // 返回 false，并退出循环。
+        // 如果 num10 等于 endList[i]['extendValue48']，则将 num10 重置为0，继续外层循环的下一个元素。
+        //
+        // 这段代码的主要目的似乎是检查 endList 中的每个元素，以确保它们与 customerList 中的对应元素满足特定条件（num10 与 endList[i]['extendValue48'] 相等），否则会触发警告并返回 false。如果没有触发警告，就会继续下一个元素的检查。
+
+
+
+
+
+        // endList 结案
+        // customerList 客户
+        const endList = [
+                {
+                    name:'10',
+                    num1: '30'
+                },
+                {
+                    name:'20',
+                    num1: '30'
+                }
+        ];
+        const customerList = [
+                {
+                    name:'10',
+                    num1: '30'
+                },
+                {
+                    name:'20',
+                    num1: '27'
+                },
+                {
+                    name:'20',
+                    num1: '2'
+                },
+                {
+                    name:'20',
+                    num1: '1'
+                }
+        ];
+        let num10 = 0;
+        let fn10 = 0;
+        for(let i = 0; i < endList.length; i++) {
+            for(let j = 0; j < customerList.length; j++) {
+                debugger
+                if(endList[i]['name'] == customerList[j]['name']) {
+                    num10 = customerList[j]['num1'];
+                }
+            }
+             fn10 = endList[i]['num1'];
+            if(num10 !== fn10) {
+                  alert(`提示报错${endList[i]['num1']}`);
+                  break;
+            } else {
+                num10 = 0
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

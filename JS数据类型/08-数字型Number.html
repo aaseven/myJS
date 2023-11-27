@@ -5,15 +5,25 @@
     <title>Title</title>
 </head>
 <script>
-    var num = 10; // num 数字型 整数
-    var a = 3.14; // 小数
+    // var num = 10; // num 数字型 整数
+    // var a = 3.14; // 小数
+    //
+    // console.log('yh'-100); // NaN
+    //
+    // // isNaN() 这个方法用来判断非数字 并且返回一个值 如果是数字返回的是false,不是数字返回true
+    //
+    // console.log(isNaN(1)); // false
+    // console.log(isNaN('yuhui'));//true
+    // 先用for循环遍历 100 到 999的所有三位数，
+    for (let i = 100; i <= 999; i++) {
+        const business = Math.floor(i / 11); //Math.floor向下取整 获取到可以除以11的整数商
+        //使用String转成字符串，然后用.split("")分割的方法来获取各位数字之和
+        const sum = String(i).split("").reduce((acc, curr) => acc + parseInt(curr), 0);
+        if (business === sum) {// 如果最后商等于各位数字只和，就打印出来
+            console.log(i); // 108 118 128 138 148 158 168 178 188 197 198
+        }
+    }
 
-    console.log('yh'-100); // NaN
-
-    // isNaN() 这个方法用来判断非数字 并且返回一个值 如果是数字返回的是false,不是数字返回true
-
-    console.log(isNaN(1)); // false
-    console.log(isNaN('yuhui'));//true
 </script>
 <body>
 

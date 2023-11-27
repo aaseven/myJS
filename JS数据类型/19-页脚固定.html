@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>底部固定</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            max-width: 375px;
+            height: 300px;
+            overflow: auto;
+        }
+
+        .main-header {
+            height: 50px;
+            background: #5c5c5c;
+            position: -webkit-sticky;
+        }
+
+        .main-content {
+            min-height: 500px;
+            background: #7C4F00;
+        }
+
+        .main-footer {
+            height: 50px;
+            background: #FFF8EB;
+            position: sticky;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <header class="main-header">头部区域</header>
+    <div class="main-content">内容区域</div>
+    <footer class="main-footer">底部区域</footer>
+</main>
+</body>
+</html>

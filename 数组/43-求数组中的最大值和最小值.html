@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 求数组[2,6,1,77]中最大的值
+        // 声明一个保存最大元素的变量 max
+        // max里面的初始值是多少？  默认值最大值可以取数组中第一个元素
+        // 遍历这个数组，把里面每个数组元素和max 相比较
+        // 如果这个数组元素大于max 就把这个数组元素存到max里面，否则继续下一轮比较。
+        // 最后输出这个max
+
+        // 我先把 [2,6,1,77] 数组中的第一个元素 2 放进去
+        // 现在max 是 2  让 max中的2 和 [2,6,1,77] 数组中的下一个元素 6去比较 ， 如果 max 比数组中的下一个元素小 那就把下一个元素 赋值给max
+        // 现在 2比6小，所以 max现在是6
+        // 然后再拿max 和数组中下一个元素做比较， 要是小就是换，要是不小就不变
+        // 6比1大，所以 max现在还是6 没有变
+        // 通过这种方式比较下来，max里面始终存的都是最大值。
+
+        // var arr = [2, 6, 1, 77];
+        // var max = arr[0];
+        // for (var i = 1; i < arr.length; i++) {
+        //     if (arr[i] > max) {
+        //         max = arr[i];
+        //     }
+        // }
+        // console.log('这个数组里面最大的值是：' + max);
+
+        var arr = [0.2,2, 6, 1, 77];
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] < max) {
+                max = arr[i];
+            }
+        }
+        console.log('这个数组里面最小的值是：' + max);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
